@@ -1,0 +1,8 @@
+flowchart LR
+    A["Technical document"] --> B["Chunk with source locator"]
+    B --> C["Retrieve evidence records"]
+    C --> D["Grounded answer"]
+    D --> E["Citation precision / abstention"]
+    E --> F["Scientific RAG for Equations
+Evaluation"]
+    F -. feedback .-> C
