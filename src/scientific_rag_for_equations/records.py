@@ -9,7 +9,7 @@ class Evidence:
     locator: str
 
 def normalize_equation(text: str) -> str:
-    return re.sub(r"\\s+", " ", text.replace("−", "-")).strip()
+    return re.sub(r"\s+", " ", text.replace("−", "-")).strip()
 
 def require_evidence(answer: str, evidence: list[Evidence]) -> dict:
     return {"answer": answer, "evidence": [e.__dict__ for e in evidence], "grounded": bool(evidence)}
