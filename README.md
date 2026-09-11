@@ -4,6 +4,33 @@
 
 > **Scientific RAG for Equations** is a grounded research retrieval record system for equations and technical resources.
 
+## Start here
+
+**In one sentence:** Keep technical answers grounded in explicit source evidence and equation records.
+
+| If you want to... | Open this first |
+|---|---|
+| Understand the method | [`src/scientific_rag_for_equations/records.py`](src/scientific_rag_for_equations/records.py) |
+| See the second reusable utility | [`src/scientific_rag_for_equations/chunking.py`](src/scientific_rag_for_equations/chunking.py) |
+| Run a tiny example | [`examples/quick_demo.py`](examples/quick_demo.py) |
+| Understand the next milestone | [`docs/ROADMAP.md`](docs/ROADMAP.md) |
+| Check correctness | [`tests/`](tests/) and the CI badge above |
+
+### System flow
+
+```mermaid
+flowchart LR
+    A[Domain input] --> B[Validated contract]
+    B --> C[source chunks]
+    C --> D[Measured output]
+    D --> E[Limitations and next experiment]
+```
+
+### What is implemented now
+
+The repository currently contains a dependency-light, deterministic baseline with tests. It is intentionally small enough to inspect line by line. The next research layer should preserve the same input contract and evaluation protocol rather than replacing the baseline with an opaque demo.
+
+
 ## Problem statement
 
 Represent answers with explicit evidence so equations and assumptions can be inspected.
